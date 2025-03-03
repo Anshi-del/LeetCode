@@ -1,0 +1,20 @@
+public class Solution {
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        boolean a=false;
+      
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<=k+i && j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    a=true;
+                    break;
+                }
+            }
+           
+
+} return a;
+}
+public static void main(String[] args) {
+    int[] nums={1,2,3,1};
+    System.out.println(containsNearbyDuplicate(nums,3));
+}
+} 
